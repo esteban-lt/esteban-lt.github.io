@@ -2,11 +2,11 @@
   "analyticsCode": "",
   "basics": {
     "name": "Esteban Ledezma",
-    "role": "Desarrollador Full Stack",
+    "role": "Desarrollador",
     "image": "/og-image.png",
     "email": "ledezmatenaesteban@gmail.com",
     "url": "https://esteban-lt.github.io",
-    "summary": "Ingeniero en Sistemas Computacionales con experiencia en desarrollo de software con el ecosistema JavaScript/TypeScript. Conocimientos en diseño UX/UI. Disponible para trabajo y nuevos proyectos.",
+    "summary": "Ingeniero en Sistemas Computacionales con experiencia en desarrollo de software con el ecosistema JavaScript/TypeScript. Disponible para trabajo y nuevos proyectos.",
     "theme": "blue",
     "location": {
       "address": "Cuauhtémoc",
@@ -52,7 +52,7 @@
       "responsibilities": [
         "Participé en proyectos de soluciones IoT para el análisis en tiempo real de vibración en maquinaria y para el monitoreo de movimiento e inclinaciones en racks.",
         "Construí dashboards para la visualización de datos, integrando APIs, WebSockets y bases de datos MySQL y PostgreSQL.",
-        "Desarrollé sistemas web internos con PHP, Node.js, Express y Vue.js, incluyendo aplicaciones administrativas, sustitución de archivos de Excel y paneles de gestión.",
+        "Desarrollé sistemas web internos con PHP, Node.js, Express y Vue.js, incluyendo aplicaciones administrativas y sustitución de archivos de Excel.",
         "Diseñé APIs RESTful para diferentes aplicaciones y servicios."
       ],
       "skills": {
@@ -173,6 +173,10 @@
       "icon": "simple-icons:astro"
     },
     {
+      "name": "Next",
+      "icon": "simple-icons:nextdotjs"
+    },
+    {
       "name": "Node",
       "icon": "simple-icons:nodedotjs"
     },
@@ -184,7 +188,15 @@
       "name": "NestJS",
       "icon": "simple-icons:nestjs"
     },
-        {
+    {
+      "name": "Dart",
+      "icon": "simple-icons:dart"
+    },
+    {
+      "name": "Flutter",
+      "icon": "simple-icons:flutter"
+    },
+    {
       "name": "Git",
       "icon": "mdi:git"
     },
@@ -197,7 +209,7 @@
       "icon": "simple-icons:mysql"
     },
     {
-      "name": "PostgreSQL",
+      "name": "Postgres",
       "icon": "simple-icons:postgresql"
     },
     {
@@ -235,10 +247,10 @@
     {
       "name": "Pulsed",
       "isActive": true,
-      "description": "Plataforma que centraliza la actividad de tus repositorios de GitHub y te notifica cuando algo relevante ocurre, para no tener que revisar GitHub manualmente.",
+      "description": "Plataforma que centraliza la actividad de repositorios de GitHub y notifica cuando algo relevante ocurre, para no tener que revisar GitHub manualmente.",
       "highlights": [
-        "Seguimiento de la actividad de tus repos usando la API de GitHub.",
-        "Feed de actividad en tiempo real vía Server-Sent Events, sin necesidad de recargar la página.",
+        "Seguimiento de la actividad de repositorios usando la API de GitHub.",
+        "Feed de actividad en tiempo real vía Server-Sent Events",
         "Notificaciones por Discord, correo y Slack (próximamente)."
       ],
       "stack": {
@@ -256,9 +268,9 @@
     {
       "name": "QMS",
       "isActive": true,
-      "description": "Plataforma multi-tenant de gestión de turnos similar al de un banco.",
+      "description": "Sistema multi-tenant de gestión de turnos similar al de un banco.",
       "highlights": [
-        "Arquitectura multi-tenant donde cada organización administra sus sucursales, ventanillas y roles (admin/manager/operator).",
+        "Arquitectura multi-tenant donde cada organización administra sus sucursales, ventanillas y roles.",
         "Backend desarrollado en Express con Clean Architecture.",
         "Actualizaciones en tiempo real usando WebSockets, para que las pantallas de espera reflejen el estado de las ventanillas al instante."
       ],
