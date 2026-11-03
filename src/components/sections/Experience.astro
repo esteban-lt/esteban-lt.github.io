@@ -3,12 +3,12 @@ import Section from '../Section.astro'
 import { work } from '@cv'
 import { Icon } from 'astro-icon/components'
 import Badge from '@/components/ui/Badge.astro'
+import { formatMonth, getDuration, type MonthStr } from '@/utils/dates'
 
 interface WorkItem {
   name: string;
-  startDate: string;
-  endDate: string | null;
-  duration: string | null;
+  startDate: MonthStr;
+  endDate: MonthStr | null;
   position: string;
   summary: string | string[] | null;
   responsibilities?: string[];
@@ -23,8 +23,10 @@ const workItems = work as unknown as WorkItem[]
 
 <Section className={Astro.props.className} title="Experiencia">
   <ul class="flex flex-col">
-    {workItems.map(({ name, startDate, endDate, duration, position, summary, responsibilities, url, skills, location, location_type }) => {
-      const dateRange = (endDate ? `${startDate} - ${endDate}` : startDate) + (duration ? ` (${duration})` : '')
+    {workItems.map(({ name, startDate, endDate, position, summary, responsibilities, url, skills, location, location_type }) => {
+      const start = formatMonth(startDate)
+      const end = endDate ? formatMonth(endDate) : 'Actualidad'
+      const dateRange = `${start === end ? start : `${start} - ${end}`} (${getDuration(startDate, endDate)})`
       return (
         <li class="relative print:py-2">
           <div data-expanded="true" class="group relative grid pb-1 print:pb-0 transition-all print:grid-cols-1 print:gap-1 lg:hover:!opacity-100 expand-container">
