@@ -43,8 +43,8 @@ interface Work {
   name: string;
   position: string;
   url: URL;
-  startDate: DateStr;
-  endDate: DateStr | null;
+  startDate: `${number}-${number}`;
+  endDate: `${number}-${number}` | null;
   summary: string;
   highlights: Highlight;
 }
