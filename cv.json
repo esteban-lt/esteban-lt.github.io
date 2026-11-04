@@ -2,11 +2,11 @@
   "analyticsCode": "",
   "basics": {
     "name": "Esteban Ledezma",
-    "role": "Desarrollador",
+    "role": "ISC | Desarrollador de software",
     "image": "/og-image.png",
     "email": "ledezmatenaesteban@gmail.com",
     "url": "https://esteban-lt.github.io",
-    "summary": "Ingeniero en Sistemas Computacionales con experiencia en desarrollo de software con el ecosistema JavaScript/TypeScript. Disponible para trabajo y nuevos proyectos.",
+    "summary": "Ingeniero en Sistemas Computacionales especializado en desarrollo de software. Tengo experiencia en diseño de APIs con Node.js y NestJS, construcción de interfaces con React y Next.js, proyectos IoT, bases de datos y pipelines de CI/CD. Me interesan las buenas prácticas de desarrollo, el aprendizaje continuo y compartir lo que sé enseñando a otros.",
     "theme": "blue",
     "location": {
       "address": "Cuauhtémoc",
@@ -24,7 +24,7 @@
       },
       {
         "network": "GitHub",
-        "icon": "mdi:github",
+        "icon": "simple-icons:github",
         "color": "#929AAB",
         "username": "esteban-lt",
         "url": "https://github.com/esteban-lt"
@@ -40,31 +40,55 @@
   },
   "work": [
     {
-      "name": "Grupo Rosa",
-      "position": "Desarrollador",
+      "name": "Load Trail",
+      "position": "Desarrollador de software",
       "location_type": "Presencial",
       "location": "Cuauhtémoc, Chihuahua",
       "url": null,
-      "startDate": "Marzo 2025",
-      "endDate": "Marzo 2026",
-      "duration": "1 año",
+      "startDate": "2026-10",
+      "endDate": null,
       "summary": null,
       "responsibilities": [
-        "Participé en proyectos de soluciones IoT para el análisis en tiempo real de vibración en maquinaria y para el monitoreo de movimiento e inclinaciones en racks.",
-        "Construí dashboards para la visualización de datos, integrando APIs, WebSockets y bases de datos MySQL y PostgreSQL.",
-        "Desarrollé sistemas web internos con PHP, Node.js, Express y Vue.js, incluyendo aplicaciones administrativas y sustitución de archivos de Excel.",
-        "Diseñé APIs RESTful para diferentes aplicaciones y servicios."
+        "Automatizo e implemento pipelines de CI/CD utilizando GitLab para mejorar los flujos de despliegue y entrega continua en los proyectos de la empresa.",
+        "Integro un microservicio de autenticación y control de acceso (ACL) en diversos proyectos y aplicaciones.",
+        "Estandarizo el proceso de desarrollo y despliegue, definiendo estrategias de ramas y criterios de control de versiones.",
+        "Realizo cambios en proyectos de Next.js como migraciones a versiones recientes, configuración de base path e integración de APIs."
       ],
       "skills": {
         "JavaScript": "simple-icons:javascript",
-        "Vue": "simple-icons:vuedotjs",
+        "React": "simple-icons:react",
+        "Next.js": "simple-icons:nextdotjs",
+        "Node.js": "simple-icons:nodedotjs",
+        "Git": "simple-icons:git",
+        "GitLab": "simple-icons:gitlab",
+        "CI/CD": "mdi:infinity"
+      }
+    },
+    {
+      "name": "Grupo Rosa",
+      "position": "Desarrollador de software",
+      "location_type": "Presencial",
+      "location": "Cuauhtémoc, Chihuahua",
+      "url": null,
+      "startDate": "2025-03",
+      "endDate": "2026-03",
+      "summary": null,
+      "responsibilities": [
+        "Participé en el desarrollo de soluciones IoT para el análisis de vibración en maquinaria en tiempo real y para el monitoreo de movimiento e inclinación en racks industriales.",
+        "Construí dashboards para la visualización de datos, integrando APIs, WebSockets y bases de datos MySQL y PostgreSQL.",
+        "Desarrollé sistemas web internos con PHP, Node.js, Express.js y Vue.js, incluyendo aplicaciones administrativas que reemplazaron el uso de archivos de Excel.",
+        "Diseñé APIs RESTful con Node.js y Express.js para aplicaciones y servicios de la empresa."
+      ],
+      "skills": {
+        "JavaScript": "simple-icons:javascript",
+        "Vue.js": "simple-icons:vuedotjs",
         "Node.js": "simple-icons:nodedotjs",
         "Express.js": "simple-icons:express",
         "PHP": "simple-icons:php",
         "MySQL": "simple-icons:mysql",
         "PostgreSQL": "simple-icons:postgresql",
-        "Git": "mdi:git",
-        "GitHub": "mdi:github"
+        "Git": "simple-icons:git",
+        "GitHub": "simple-icons:github"
       }
     },
     {
@@ -73,69 +97,68 @@
       "location_type": "Presencial",
       "location": "Cuauhtémoc, Chihuahua",
       "url": null,
-      "startDate": "Marzo 2026",
-      "endDate": null,
-      "duration": null,
+      "startDate": "2026-03",
+      "endDate": "2026-03",
       "summary": null,
       "responsibilities": [
-        "Diseñé e impartí un taller intensivo sobre Node.js, Express y GitHub para 20 alumnos.",
+        "Diseñé e impartí un taller intensivo de desarrollo backend con Node.js y Express.js para 20 estudiantes.",
         "Guié a los participantes en el desarrollo de una API RESTful, aplicando código limpio y principios SOLID.",
-        "Enseñé a probar endpoints con Postman y a consumirlos desde una aplicación de React.",
-        "Cubrí varios temas de git y GitHub como repositorios, commits, ramas, pull requests e issues."
+        "Enseñé a probar endpoints con Postman y a consumirlos desde una aplicación en React.",
+        "Introduje el flujo de trabajo con Git y GitHub, cubriendo temas como repositorios, commits, ramas, pull requests e issues."
       ],
       "skills": {
         "Node.js": "simple-icons:nodedotjs",
         "Express.js": "simple-icons:express",
-        "Git": "mdi:git",
-        "GitHub": "mdi:github",
+        "Git": "simple-icons:git",
+        "GitHub": "simple-icons:github",
         "Postman": "simple-icons:postman"
       }
     }
   ],
   "education": [
     {
-      "institution": "Instituto Tecnológico de Cd. Cuauhtémoc", 
-      "startDate": "Septiembre 2022", 
-      "endDate": "Diciembre 2026", 
-      "area": "Ingeniería en Sistemas Computacionales", 
+      "institution": "Instituto Tecnológico de Cd. Cuauhtémoc",
+      "startDate": "Septiembre 2022",
+      "endDate": "Diciembre 2026",
+      "area": "Ingeniería en Sistemas Computacionales",
       "url": null
     }
   ],
   "certificates": [
     {
-      "name": "Patrones de Diseño", 
-      "date": "Agosto 2026", 
-      "issuer": "Udemy", 
+      "name": "Patrones de Diseño",
+      "date": "Agosto 2026",
+      "issuer": "Udemy",
       "url": "https://www.udemy.com/certificate/UC-9bcd709c-8bba-46ce-b9fe-cbd4b8dbe179/"
     },
     {
-      "name": "Principios SOLID y Clean Code", 
-      "date": "Junio 2026", 
-      "issuer": "Udemy", 
+      "name": "Principios SOLID y Clean Code",
+      "date": "Junio 2026",
+      "issuer": "Udemy",
       "url": "https://www.udemy.com/certificate/UC-55edef26-f41a-4320-a2d9-634a38780b2f/"
     },
     {
-      "name": "Node - Autenticación Rest con Clean Architecture", 
-      "date": "Abril 2026", 
-      "issuer": "DevTalles", 
+      "name": "Node - Autenticación REST con Clean Architecture",
+      "date": "Abril 2026",
+      "issuer": "DevTalles",
       "url": "https://cursos.devtalles.com/certificates/irejzrtkwk"
     },
     {
-      "name": "Google Cloud Computing Foundations", 
-      "date": "Diciembre 2025", 
-      "issuer": "Google", 
+      "name": "Google Cloud Computing Foundations",
+      "date": "Diciembre 2025",
+      "issuer": "Google",
       "url": "https://www.credly.com/badges/d127cb2b-2ee7-432a-96a5-af2ed82c9f0c/linked_in_profile"
     },
     {
-      "name": "Docker - Guía práctica de uso para desarrolladores", 
-      "date": "Noviembre 2025", 
-      "issuer": "Udemy", 
+      "name": "Docker - Guía práctica de uso para desarrolladores",
+      "date": "Noviembre 2025",
+      "issuer": "Udemy",
       "url": "https://www.udemy.com/certificate/UC-d4e58855-a2bf-48c1-bd03-f7ef9c8c721e/"
     },
     {
-      "name": "Certificado de Diseño de Experiencia del Usuario (UX)", 
-      "date": "Marzo 2025", 
-      "issuer": "Google", 
+      "name": "Diseño de Experiencia del Usuario (UX)",
+      "date": "Marzo 2025",
+      "issuer": "Google",
       "url": "https://www.credly.com/badges/ca1e4277-209b-4aca-949b-a035466ba4a3/linked_in_profile"
     }
   ],
@@ -146,11 +169,11 @@
     },
     {
       "name": "CSS",
-      "icon": "ri:css3-fill"
+      "icon": "simple-icons:css"
     },
     {
-      "name": "Tailwind",
-      "icon": "mdi:tailwind"
+      "name": "Tailwind CSS",
+      "icon": "simple-icons:tailwindcss"
     },
     {
       "name": "JavaScript",
@@ -165,7 +188,7 @@
       "icon": "simple-icons:react"
     },
     {
-      "name": "Vue",
+      "name": "Vue.js",
       "icon": "simple-icons:vuedotjs"
     },
     {
@@ -173,15 +196,15 @@
       "icon": "simple-icons:astro"
     },
     {
-      "name": "Next",
+      "name": "Next.js",
       "icon": "simple-icons:nextdotjs"
     },
     {
-      "name": "Node",
+      "name": "Node.js",
       "icon": "simple-icons:nodedotjs"
     },
     {
-      "name": "Express",
+      "name": "Express.js",
       "icon": "simple-icons:express"
     },
     {
@@ -189,27 +212,23 @@
       "icon": "simple-icons:nestjs"
     },
     {
-      "name": "Dart",
-      "icon": "simple-icons:dart"
-    },
-    {
-      "name": "Flutter",
-      "icon": "simple-icons:flutter"
-    },
-    {
       "name": "Git",
-      "icon": "mdi:git"
+      "icon": "simple-icons:git"
     },
     {
       "name": "GitHub",
-      "icon": "mdi:github"
+      "icon": "simple-icons:github"
+    },
+    {
+      "name": "GitLab",
+      "icon": "simple-icons:gitlab"
     },
     {
       "name": "MySQL",
       "icon": "simple-icons:mysql"
     },
     {
-      "name": "Postgres",
+      "name": "PostgreSQL",
       "icon": "simple-icons:postgresql"
     },
     {
@@ -221,12 +240,12 @@
       "icon": "simple-icons:googlecloud"
     },
     {
-      "name": "AWS",
-      "icon": "mdi:aws"
+      "name": "Docker",
+      "icon": "simple-icons:docker"
     },
     {
-      "name": "Docker",
-      "icon": "mdi:docker"
+      "name": "CI/CD",
+      "icon": "mdi:infinity"
     },
     {
       "name": "Postman",
@@ -247,43 +266,45 @@
     {
       "name": "Pulsed",
       "isActive": true,
-      "description": "Plataforma que centraliza la actividad de repositorios de GitHub y notifica cuando algo relevante ocurre, para no tener que revisar GitHub manualmente.",
+      "description": "Plataforma que centraliza la actividad de repositorios de GitHub y envía notificaciones cuando ocurre algo relevante, para no tener que revisarlos manualmente.",
       "highlights": [
-        "Seguimiento de la actividad de repositorios usando la API de GitHub.",
-        "Feed de actividad en tiempo real vía Server-Sent Events",
-        "Notificaciones por Discord, correo y Slack (próximamente)."
+        "Seguimiento de la actividad de repositorios mediante la API de GitHub.",
+        "Feed de actividad en tiempo real con Server-Sent Events.",
+        "Notificaciones por Discord y correo (próximamente)."
       ],
       "stack": {
         "TypeScript": "simple-icons:typescript",
         "React": "simple-icons:react",
-        "Tailwind": "simple-icons:tailwindcss",
+        "Tailwind CSS": "simple-icons:tailwindcss",
+        "shadcn/ui": "simple-icons:shadcnui",
         "Node.js": "simple-icons:nodedotjs",
-        "Express": "simple-icons:express",
+        "Express.js": "simple-icons:express",
         "NestJS": "simple-icons:nestjs",
         "PostgreSQL": "simple-icons:postgresql"
       },
-      "url": "https://github.com/esteban-lt/pulsed",
-      "github": null
+      "url": null,
+      "github": "https://github.com/esteban-lt/pulsed"
     },
     {
-      "name": "QMS",
+      "name": "Mercado Libre Price Tracker",
       "isActive": true,
-      "description": "Sistema multi-tenant de gestión de turnos similar al de un banco.",
+      "description": "Aplicación para monitorear los precios de productos en Mercado Libre, con alertas configurables ante variaciones de precio y ofertas.",
       "highlights": [
-        "Arquitectura multi-tenant donde cada organización administra sus sucursales, ventanillas y roles.",
-        "Backend desarrollado en Express con Clean Architecture.",
-        "Actualizaciones en tiempo real usando WebSockets, para que las pantallas de espera reflejen el estado de las ventanillas al instante."
+        "Seguimiento continuo de precios con la API de Mercado Libre y tareas programadas.",
+        "Alertas automáticas por correo cuando un producto alcanza un precio objetivo o registra una caída porcentual definida.",
+        "Almacenamiento del historial de precios en PostgreSQL."
       ],
       "stack": {
         "TypeScript": "simple-icons:typescript",
-        "React": "simple-icons:react",
-        "Tailwind": "simple-icons:tailwindcss",
+        "Next.js": "simple-icons:nextdotjs",
+        "Tailwind CSS": "simple-icons:tailwindcss",
+        "shadcn/ui": "simple-icons:shadcnui",
         "Node.js": "simple-icons:nodedotjs",
-        "Express": "simple-icons:express",
+        "NestJS": "simple-icons:nestjs",
         "PostgreSQL": "simple-icons:postgresql"
       },
-      "url": "https://github.com/esteban-lt/queue-management-system",
-      "github": null
+      "url": null,
+      "github": "https://github.com/esteban-lt/ml-price-tracker"
     }
   ]
 }
