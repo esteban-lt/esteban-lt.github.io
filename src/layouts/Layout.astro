@@ -1,9 +1,10 @@
 ---
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import '../globals.css';
-import CV from "@cv";
+import { defaultLang, getCV, getPath, locales, type Lang } from "@/i18n";
 
 interface Props {
+  lang?: Lang;
   title: string;
   description?: string;
   image?: string;
@@ -12,9 +13,10 @@ interface Props {
 }
 
 const { 
+  lang = defaultLang,
   title,
-  image = CV.basics.image,
-  canonicalURL = CV.basics.url,
+  image: imageProp,
+  canonicalURL: canonicalProp,
   keywords = [
     "Esteban Ledezma",
     "Full Stack Developer",
@@ -33,7 +35,11 @@ const {
   ]
 } = Astro.props;
 
+const CV = getCV(lang);
+const image = imageProp ?? CV.basics.image;
 const { url, theme, name, location } = CV.basics;
+const pageUrl = (target: Lang) => new URL(getPath(target), url).toString();
+const canonicalURL = canonicalProp ?? pageUrl(lang);
 const { city, region } = location;
 
 const detailedDescription = CV.basics.summary;
@@ -48,7 +54,7 @@ const structuredData = {
   "url": url,
   "email": CV.basics.email,
   "alumniOf": (CV as any).education?.[0]?.institution,
-  "knowsLanguage": CV.languages?.map(lang => lang.language),
+  "knowsLanguage": CV.languages?.map(l => l.language),
   "sameAs": CV.basics.profiles.map(profile => profile.url),
   "image": new URL(image, url).toString(),
   "description": detailedDescription,
@@ -68,7 +74,7 @@ const structuredData = {
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -86,6 +92,23 @@ const structuredData = {
       })();
     </script>
 
+    <!-- On the default-language root, send first-time visitors with an English browser to /en/ -->
+    {lang === defaultLang && (
+      <script is:inline>
+        (function () {
+          try {
+            if (location.pathname !== '/') return;
+            if (localStorage.getItem('lang')) {
+              if (localStorage.getItem('lang') === 'en') location.replace('/en/' + location.search + location.hash);
+              return;
+            }
+            var preferred = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+            if (preferred.toLowerCase().indexOf('en') === 0) location.replace('/en/' + location.search + location.hash);
+          } catch (e) {}
+        })();
+      </script>
+    )}
+
     <!-- Primary Meta Tags -->
     <title>{title}</title>
     <meta name="title" content={title} />
@@ -97,6 +120,9 @@ const structuredData = {
     
     <!-- Canonical URL -->
     <link rel="canonical" href={canonicalURL} />
+    <link rel="alternate" hreflang="es" href={pageUrl('es')} />
+    <link rel="alternate" hreflang="en" href={pageUrl('en')} />
+    <link rel="alternate" hreflang="x-default" href={pageUrl(defaultLang)} />
     
     <!-- Favicon -->
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -104,7 +130,7 @@ const structuredData = {
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={url} />
+    <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={detailedDescription} />
     <meta property="og:image" content={new URL(image, url)} />
@@ -112,12 +138,13 @@ const structuredData = {
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content={`${name} — ${CV.basics.role}`} />
     <meta property="og:site_name" content={`${name}'s Portfolio`} />
-    <meta property="og:locale" content="es_MX" />
+    <meta property="og:locale" content={locales[lang].og} />
+    <meta property="og:locale:alternate" content={locales[lang === 'es' ? 'en' : 'es'].og} />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:domain" content={url.split("//")[1] ?? ""} />
-    <meta name="twitter:url" content={url} />
+    <meta name="twitter:url" content={canonicalURL} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={detailedDescription} />
     <meta name="twitter:image" content={new URL(image, url)} />
