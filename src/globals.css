@@ -121,6 +121,7 @@
   body {
     @apply bg-nvim-bg text-nvim-fg font-mono select-none;
     --color-hover-soft: color-mix(in srgb, rgb(var(--color)) 8%, rgb(var(--color-fill)) 92%);
+    --color-card-hover: color-mix(in srgb, rgb(var(--color)) 4%, rgb(var(--color-button-muted)) 96%);
 
     .c-cursor {
       position: fixed;
