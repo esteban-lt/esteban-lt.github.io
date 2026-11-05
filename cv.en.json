@@ -1,0 +1,310 @@
+{
+  "analyticsCode": "",
+  "basics": {
+    "name": "Esteban Ledezma",
+    "role": "Computer Systems Engineer | Software Developer",
+    "image": "/og-image.png",
+    "email": "ledezmatenaesteban@gmail.com",
+    "url": "https://esteban-lt.github.io",
+    "summary": "Computer Systems Engineer specialized in software development. I have experience designing APIs with Node.js and NestJS, building interfaces with React and Next.js, IoT projects, databases and CI/CD pipelines. I care about good development practices, continuous learning and sharing what I know by teaching others.",
+    "theme": "blue",
+    "location": {
+      "address": "Cuauhtémoc",
+      "city": "Chihuahua",
+      "countryCode": "MX",
+      "region": "Mexico"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "icon": "ri:linkedin-fill",
+        "color": "#0A66C2",
+        "username": "esteban-ledezma",
+        "url": "https://www.linkedin.com/in/esteban-ledezma/"
+      },
+      {
+        "network": "GitHub",
+        "icon": "simple-icons:github",
+        "color": "#929AAB",
+        "username": "esteban-lt",
+        "url": "https://github.com/esteban-lt"
+      },
+      {
+        "network": "Email",
+        "icon": "ri:mail-fill",
+        "color": "#D44638",
+        "username": "Esteban Ledezma",
+        "url": "mailto:ledezmatenaesteban@gmail.com"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Load Trail",
+      "position": "Software Developer",
+      "location_type": "On-site",
+      "location": "Cuauhtémoc, Chihuahua",
+      "url": null,
+      "startDate": "2026-10",
+      "endDate": null,
+      "summary": null,
+      "responsibilities": [
+        "I automate and implement CI/CD pipelines using GitLab to improve deployment and continuous delivery workflows across the company's projects.",
+        "I integrate an authentication and access control (ACL) microservice into various projects and applications.",
+        "I standardize the development and deployment process by defining branching strategies and version control criteria.",
+        "I make changes to Next.js projects such as migrations to recent versions, base path configuration and API integration."
+      ],
+      "skills": {
+        "JavaScript": "simple-icons:javascript",
+        "React": "simple-icons:react",
+        "Next.js": "simple-icons:nextdotjs",
+        "Node.js": "simple-icons:nodedotjs",
+        "Git": "simple-icons:git",
+        "GitLab": "simple-icons:gitlab",
+        "CI/CD": "mdi:infinity"
+      }
+    },
+    {
+      "name": "Grupo Rosa",
+      "position": "Software Developer",
+      "location_type": "On-site",
+      "location": "Cuauhtémoc, Chihuahua",
+      "url": null,
+      "startDate": "2025-03",
+      "endDate": "2026-03",
+      "summary": null,
+      "responsibilities": [
+        "Took part in developing IoT solutions for real-time vibration analysis of machinery and for motion and tilt monitoring of industrial racks.",
+        "Built dashboards for data visualization, integrating APIs, WebSockets and MySQL and PostgreSQL databases.",
+        "Developed internal web systems with PHP, Node.js, Express.js and Vue.js, including administrative applications that replaced the use of Excel files.",
+        "Designed RESTful APIs with Node.js and Express.js for the company's applications and services."
+      ],
+      "skills": {
+        "JavaScript": "simple-icons:javascript",
+        "Vue.js": "simple-icons:vuedotjs",
+        "Node.js": "simple-icons:nodedotjs",
+        "Express.js": "simple-icons:express",
+        "PHP": "simple-icons:php",
+        "MySQL": "simple-icons:mysql",
+        "PostgreSQL": "simple-icons:postgresql",
+        "Git": "simple-icons:git",
+        "GitHub": "simple-icons:github"
+      }
+    },
+    {
+      "name": "ITCC",
+      "position": "Instructor",
+      "location_type": "On-site",
+      "location": "Cuauhtémoc, Chihuahua",
+      "url": null,
+      "startDate": "2026-03",
+      "endDate": "2026-03",
+      "summary": null,
+      "responsibilities": [
+        "Designed and taught an intensive backend development workshop with Node.js and Express.js for 20 students.",
+        "Guided participants in building a RESTful API, applying clean code and SOLID principles.",
+        "Taught how to test endpoints with Postman and consume them from a React application.",
+        "Introduced the Git and GitHub workflow, covering topics such as repositories, commits, branches, pull requests and issues."
+      ],
+      "skills": {
+        "Node.js": "simple-icons:nodedotjs",
+        "Express.js": "simple-icons:express",
+        "Git": "simple-icons:git",
+        "GitHub": "simple-icons:github",
+        "Postman": "simple-icons:postman"
+      }
+    }
+  ],
+  "education": [
+    {
+      "institution": "Instituto Tecnológico de Cd. Cuauhtémoc",
+      "startDate": "September 2022",
+      "endDate": "December 2026",
+      "area": "Computer Systems Engineering",
+      "url": null
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Patrones de Diseño",
+      "date": "August 2026",
+      "issuer": "Udemy",
+      "url": "https://www.udemy.com/certificate/UC-9bcd709c-8bba-46ce-b9fe-cbd4b8dbe179/"
+    },
+    {
+      "name": "Principios SOLID y Clean Code",
+      "date": "June 2026",
+      "issuer": "Udemy",
+      "url": "https://www.udemy.com/certificate/UC-55edef26-f41a-4320-a2d9-634a38780b2f/"
+    },
+    {
+      "name": "Node - Autenticación REST con Clean Architecture",
+      "date": "April 2026",
+      "issuer": "DevTalles",
+      "url": "https://cursos.devtalles.com/certificates/irejzrtkwk"
+    },
+    {
+      "name": "Google Cloud Computing Foundations",
+      "date": "December 2025",
+      "issuer": "Google",
+      "url": "https://www.credly.com/badges/d127cb2b-2ee7-432a-96a5-af2ed82c9f0c/linked_in_profile"
+    },
+    {
+      "name": "Docker - Guía práctica de uso para desarrolladores",
+      "date": "November 2025",
+      "issuer": "Udemy",
+      "url": "https://www.udemy.com/certificate/UC-d4e58855-a2bf-48c1-bd03-f7ef9c8c721e/"
+    },
+    {
+      "name": "User Experience (UX) Design",
+      "date": "March 2025",
+      "issuer": "Google",
+      "url": "https://www.credly.com/badges/ca1e4277-209b-4aca-949b-a035466ba4a3/linked_in_profile"
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML",
+      "icon": "simple-icons:html5"
+    },
+    {
+      "name": "CSS",
+      "icon": "simple-icons:css"
+    },
+    {
+      "name": "Tailwind CSS",
+      "icon": "simple-icons:tailwindcss"
+    },
+    {
+      "name": "JavaScript",
+      "icon": "simple-icons:javascript"
+    },
+    {
+      "name": "TypeScript",
+      "icon": "simple-icons:typescript"
+    },
+    {
+      "name": "React",
+      "icon": "simple-icons:react"
+    },
+    {
+      "name": "Vue.js",
+      "icon": "simple-icons:vuedotjs"
+    },
+    {
+      "name": "Astro",
+      "icon": "simple-icons:astro"
+    },
+    {
+      "name": "Next.js",
+      "icon": "simple-icons:nextdotjs"
+    },
+    {
+      "name": "Node.js",
+      "icon": "simple-icons:nodedotjs"
+    },
+    {
+      "name": "Express.js",
+      "icon": "simple-icons:express"
+    },
+    {
+      "name": "NestJS",
+      "icon": "simple-icons:nestjs"
+    },
+    {
+      "name": "Git",
+      "icon": "simple-icons:git"
+    },
+    {
+      "name": "GitHub",
+      "icon": "simple-icons:github"
+    },
+    {
+      "name": "GitLab",
+      "icon": "simple-icons:gitlab"
+    },
+    {
+      "name": "MySQL",
+      "icon": "simple-icons:mysql"
+    },
+    {
+      "name": "PostgreSQL",
+      "icon": "simple-icons:postgresql"
+    },
+    {
+      "name": "MongoDB",
+      "icon": "simple-icons:mongodb"
+    },
+    {
+      "name": "Google Cloud",
+      "icon": "simple-icons:googlecloud"
+    },
+    {
+      "name": "Docker",
+      "icon": "simple-icons:docker"
+    },
+    {
+      "name": "CI/CD",
+      "icon": "mdi:infinity"
+    },
+    {
+      "name": "Postman",
+      "icon": "simple-icons:postman"
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Native"
+    },
+    {
+      "language": "English",
+      "fluency": "B2"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Pulsed",
+      "isActive": true,
+      "description": "Platform that centralizes GitHub repository activity and sends notifications when something relevant happens, so you don't have to check them manually.",
+      "highlights": [
+        "Repository activity tracking through the GitHub API.",
+        "Real-time activity feed with Server-Sent Events.",
+        "Discord and email notifications coming soon."
+      ],
+      "stack": {
+        "TypeScript": "simple-icons:typescript",
+        "React": "simple-icons:react",
+        "Tailwind CSS": "simple-icons:tailwindcss",
+        "shadcn/ui": "simple-icons:shadcnui",
+        "Node.js": "simple-icons:nodedotjs",
+        "Express.js": "simple-icons:express",
+        "NestJS": "simple-icons:nestjs",
+        "PostgreSQL": "simple-icons:postgresql"
+      },
+      "url": null,
+      "github": "https://github.com/esteban-lt/pulsed"
+    },
+    {
+      "name": "Mercado Libre Price Tracker",
+      "isActive": true,
+      "description": "Application to monitor product prices on Mercado Libre, with configurable alerts for price changes and deals.",
+      "highlights": [
+        "Continuous price tracking with the Mercado Libre API and scheduled jobs.",
+        "Automatic email alerts when a product reaches a target price or drops by a set percentage.",
+        "Price history stored in PostgreSQL."
+      ],
+      "stack": {
+        "TypeScript": "simple-icons:typescript",
+        "Next.js": "simple-icons:nextdotjs",
+        "Tailwind CSS": "simple-icons:tailwindcss",
+        "shadcn/ui": "simple-icons:shadcnui",
+        "Node.js": "simple-icons:nodedotjs",
+        "NestJS": "simple-icons:nestjs",
+        "PostgreSQL": "simple-icons:postgresql"
+      },
+      "url": null,
+      "github": "https://github.com/esteban-lt/ml-price-tracker"
+    }
+  ]
+}

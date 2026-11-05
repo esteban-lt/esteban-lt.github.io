@@ -2,8 +2,12 @@
 import Section from '../Section.astro'
 import { Icon } from 'astro-icon/components'
 
-import { education } from '@cv'
-import { certificates } from '@cv'
+import { getCV, useTranslations, type Lang } from '@/i18n'
+
+interface Props {
+  lang: Lang;
+  className?: string;
+}
 
 interface EducationItem {
   institution: string;
@@ -20,11 +24,14 @@ interface CertificateItem {
   url: string;
 }
 
+const { lang } = Astro.props
+const t = useTranslations(lang)
+const { education, certificates } = getCV(lang)
 const educationItems = education as unknown as EducationItem[]
 const certificateItems = certificates as unknown as CertificateItem[]
 ---
 
-<Section className={Astro.props.className} title='Educación'>
+<Section className={Astro.props.className} title={t.education}>
   <ul class='space-y-4 py-3 print:space-y-0'>
     {
       educationItems.map(
@@ -77,7 +84,7 @@ const certificateItems = certificates as unknown as CertificateItem[]
   </ul>
   {
     certificateItems.length > 0 && (
-      <Section className={Astro.props.className} title='Certificados'>
+      <Section className={Astro.props.className} title={t.certificates}>
         <ul class='space-y-4 py-3 print:space-y-0'>
           {certificateItems.map(({ name, date, issuer, url }) => {
             return (

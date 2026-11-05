@@ -17,7 +17,12 @@ export default defineConfig({
         "simple-icons": ["*"],
       },
     }),
-    sitemap(),
+    sitemap({
+      i18n: {
+        defaultLocale: "es",
+        locales: { es: "es-MX", en: "en-US" },
+      },
+    }),
     playformCompress({
       CSS: false,
       Image: false,
@@ -26,6 +31,11 @@ export default defineConfig({
       },
     }),
   ],
+  i18n: {
+    defaultLocale: "es",
+    locales: ["es", "en"],
+    routing: { prefixDefaultLocale: false },
+  },
   outDir: "dist",
   output: "static",
 });

@@ -1,5 +1,14 @@
 ---
 import { Icon } from 'astro-icon/components'
+import { getOtherLang, getPath, useTranslations, type Lang } from '@/i18n'
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props
+const t = useTranslations(lang)
+const otherLang = getOtherLang(lang)
 ---
 
 <div class='inline-flex items-center print:hidden'>
@@ -9,7 +18,7 @@ import { Icon } from 'astro-icon/components'
       data-ccursor="lift"
       id='themeSwitch'
       class='cursor-none'
-      aria-label='Toggle dark mode'>
+      aria-label={t.toggleDark}>
       <i
         class='flex items-center gap-1 text-sm font-medium leading-6 text-skin-base transition-transform duration-300 ease-in-out group-hover/theme:rotate-45'>
         <Icon
@@ -21,6 +30,7 @@ import { Icon } from 'astro-icon/components'
         <Icon name='ri:sun-fill' class='dark:hidden' width={28} height={28} />
       </i>
     </button>
+    <div class='flex items-stretch gap-2'>
     <select
       data-ccursor
       id='themeSelect'
@@ -30,6 +40,19 @@ import { Icon } from 'astro-icon/components'
       <option value='blue'>Blue</option>
       <option value="platinum">Platinum</option>
     </select>
+    <a
+      data-ccursor
+      id='langSwitch'
+      href={getPath(otherLang)}
+      hreflang={otherLang}
+      lang={otherLang}
+      data-lang={otherLang}
+      title={t.switchLang}
+      aria-label={t.switchLang}
+      class='inline-flex items-center rounded-md bg-transparent px-3 text-sm font-medium text-skin-hue ring-1 ring-inset ring-skin-muted hover:cursor-none focus-visible:ring-2 focus-visible:ring-skin-hue'>
+      {t.switchLangCode}
+    </a>
+    </div>
   </div>
 </div>
 
@@ -123,6 +146,13 @@ import { Icon } from 'astro-icon/components'
   if (themeSelect) {
     themeSelect.value = storedDataTheme
   }
+
+  // Remember the chosen language so the root redirect respects it
+  document.getElementById('langSwitch')?.addEventListener('click', e => {
+    try {
+      localStorage.setItem('lang', (e.currentTarget as HTMLElement).dataset.lang!)
+    } catch {}
+  })
 
   // Listen for changes in system color scheme
   window
