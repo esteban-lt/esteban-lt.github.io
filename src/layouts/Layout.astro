@@ -1,7 +1,7 @@
 ---
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import '../globals.css';
-import { defaultLang, getCV, getPath, locales, type Lang } from "@/i18n";
+import { defaultLang, getCV, getPath, locales, useTranslations, type Lang } from "@/i18n";
 
 interface Props {
   lang?: Lang;
@@ -9,55 +9,44 @@ interface Props {
   description?: string;
   image?: string;
   canonicalURL?: string;
-  keywords?: string[];
 }
 
-const { 
+const {
   lang = defaultLang,
   title,
   image: imageProp,
   canonicalURL: canonicalProp,
-  keywords = [
-    "Esteban Ledezma",
-    "Full Stack Developer",
-    "Frontend Developer",
-    "Backend Developer",
-    "Web Developer",
-    "Software Engineer",
-    "React Developer",
-    "Next.js Developer",
-    "TypeScript Developer",
-    "Go Developer",
-    "Chihuahua",
-    "México",
-    "Portfolio",
-    "E-commerce Projects",
-  ]
+  description: descriptionProp,
 } = Astro.props;
 
 const CV = getCV(lang);
+const t = useTranslations(lang);
 const image = imageProp ?? CV.basics.image;
+const description = descriptionProp ?? t.description;
 const { url, theme, name, location } = CV.basics;
 const pageUrl = (target: Lang) => new URL(getPath(target), url).toString();
 const canonicalURL = canonicalProp ?? pageUrl(lang);
 const { city, region } = location;
 
-const detailedDescription = CV.basics.summary;
+const currentJob = CV.work?.find((job) => !job.endDate);
+const institution = CV.education?.[0]?.institution;
 
-// Create structured data for better SEO
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": name,
   "alternateName": "Esteban",
-  "jobTitle": CV.basics.role,
-  "url": url,
+  "jobTitle": currentJob?.position ?? CV.basics.role,
+  "url": canonicalURL,
   "email": CV.basics.email,
-  "alumniOf": (CV as any).education?.[0]?.institution,
+  "alumniOf": institution && {
+    "@type": "EducationalOrganization",
+    "name": institution
+  },
   "knowsLanguage": CV.languages?.map(l => l.language),
   "sameAs": CV.basics.profiles.map(profile => profile.url),
   "image": new URL(image, url).toString(),
-  "description": detailedDescription,
+  "description": CV.basics.summary,
   "address": {
     "@type": "PostalAddress",
     "addressLocality": city,
@@ -65,11 +54,10 @@ const structuredData = {
     "addressCountry": "MX"
   },
   "knowsAbout": CV.skills.map(skill => skill.name),
-  "worksFor": CV.work?.map(work => ({
+  "worksFor": currentJob && {
     "@type": "Organization",
-    "name": work.name,
-    "position": work.position
-  }))
+    "name": currentJob.name
+  }
 };
 ---
 
@@ -111,10 +99,8 @@ const structuredData = {
 
     <!-- Primary Meta Tags -->
     <title>{title}</title>
-    <meta name="title" content={title} />
-    <meta name="description" content={detailedDescription} />
+    <meta name="description" content={description} />
     <meta name="author" content={name} />
-    <meta name="keywords" content={keywords.join(", ")} />
     <meta name="geo.region" content="MX-CHH" />
     <meta name="geo.placename" content={city} />
     
@@ -132,12 +118,12 @@ const structuredData = {
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
-    <meta property="og:description" content={detailedDescription} />
+    <meta property="og:description" content={description} />
     <meta property="og:image" content={new URL(image, url)} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content={`${name} — ${CV.basics.role}`} />
-    <meta property="og:site_name" content={`${name}'s Portfolio`} />
+    <meta property="og:site_name" content={t.siteName} />
     <meta property="og:locale" content={locales[lang].og} />
     <meta property="og:locale:alternate" content={locales[lang === 'es' ? 'en' : 'es'].og} />
 
@@ -146,7 +132,7 @@ const structuredData = {
     <meta name="twitter:domain" content={url.split("//")[1] ?? ""} />
     <meta name="twitter:url" content={canonicalURL} />
     <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={detailedDescription} />
+    <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={new URL(image, url)} />
     {(() => {
       const twitterHandle = CV.basics.profiles.find(p => p.network === 'X / Twitter')?.username;
@@ -154,7 +140,8 @@ const structuredData = {
     })()}
     
     <!-- Additional meta tags -->
-    <meta name="theme-color" content={theme === 'dark' ? '#1a1a1a' : '#ffffff'} />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)" />
     <meta name="referrer" content="no-referrer" />
     <meta name="generator" content={Astro.generator} />
     
@@ -179,8 +166,13 @@ const structuredData = {
   body{
     * {
     @apply rounded-lg;
-    cursor: none !important;
     -webkit-user-drag: none;
+    }
+  }
+
+  @media (min-width: 640px) {
+    body * {
+      cursor: none !important;
     }
   }
   
