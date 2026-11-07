@@ -28,7 +28,10 @@ if (mq.matches) {
 		};
 	}
 	
+	const selectableText = "p, li, h1, h2, h3, h4, span, a, time, label, button, select";
+
 	container.addEventListener("mousedown", (e: MouseEvent) => {
+		if ((e.target as HTMLElement).closest(selectableText)) return;
 		isDragging = true;
 		startY = e.pageY;
 		lastY = e.pageY;
