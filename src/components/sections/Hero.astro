@@ -54,6 +54,19 @@ const { city, region, address } = location
           </Button>
         ))
       }
+      <Button
+        href={t.cvFile}
+        variant="outline"
+        target="_blank"
+        rel="noopener"
+        aria-label={t.viewCVLabel}
+        data-umami-event="CV view"
+        data-ccursor
+        id="cv-view"
+      >
+        <Icon name="ri:file-text-line" width={18} height={18} />
+        {t.viewCV}
+      </Button>
     </div>
   </div>
 </Section>
