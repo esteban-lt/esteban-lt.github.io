@@ -19,7 +19,10 @@ export const getOtherLang = (lang: Lang): Lang => (lang === 'es' ? 'en' : 'es')
 export const getPath = (lang: Lang) => (lang === defaultLang ? '/' : `/${lang}/`)
 
 const esUi = {
-  title: 'Esteban Ledezma | Desarrollador Full Stack',
+  title: 'Esteban Ledezma – ISC | Desarrollador de Software',
+  siteName: 'Portafolio de Esteban Ledezma',
+  description:
+    'Portafolio de Esteban Ledezma, desarrollador de software en Chihuahua. APIs con Node.js y NestJS, interfaces con React y Next.js, IoT y pipelines de CI/CD.',
   about: 'Sobre mí',
   experience: 'Experiencia',
   projects: 'Proyectos',
@@ -42,7 +45,10 @@ const esUi = {
 }
 
 const enUi: typeof esUi = {
-  title: 'Esteban Ledezma | Full Stack Developer',
+  title: 'Esteban Ledezma – Software Developer',
+  siteName: "Esteban Ledezma's Portfolio",
+  description:
+    'Portfolio of Esteban Ledezma, software developer in Chihuahua, Mexico. APIs with Node.js and NestJS, interfaces with React and Next.js, IoT and CI/CD pipelines.',
   about: 'About me',
   experience: 'Experience',
   projects: 'Projects',
