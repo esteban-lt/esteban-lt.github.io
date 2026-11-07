@@ -15,7 +15,6 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
     "@astrojs/tailwind": "^5.1.1",
-    "@fancyapps/ui": "^5.0.36",
     "@iconify-json/mdi": "^1.2.2",
     "@iconify-json/ri": "^1.2.5",
     "@iconify-json/simple-icons": "^1.2.18",
